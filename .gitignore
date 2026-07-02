@@ -1,0 +1,15 @@
+# Node artifacts
+node_modules/
+/dist/
+/build/
+/.vite/
+/.idea/
+/.vscode/
+.DS_Store
+
+# Frontend dependencies
+frontend/node_modules/
+
+# Backend artifacts
+backend/bin/
+backend/obj/
