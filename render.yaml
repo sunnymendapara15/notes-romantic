@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: notes-romantic-api
+    env: net
+    plan: free
+    branch: main
+    root: backend
+    buildCommand: dotnet publish -c Release -o ./publish
+    startCommand: dotnet ./publish/notes-api.dll --urls http://0.0.0.0:10000
+    healthCheckPath: /notes
+    envVars:
+      - key: DOTNET_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:10000
+    autoDeploy: true
+    disk: 1
